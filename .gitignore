@@ -1,0 +1,7 @@
+# Data
+*.sra
+*.fastq
+
+
+#System files
+.DS_Store
