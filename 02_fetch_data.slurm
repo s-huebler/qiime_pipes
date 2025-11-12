@@ -45,7 +45,7 @@ PROJECT_NAME="$1"
 module purge 
 
 # Load the SRA Toolkit module
-module load sratoolkit/3.1.1 
+module load sra-toolkit/3.1.1 
 
 echo "--- Modules loaded. ---"
 command -v prefetch       # Verify prefetch is found
