@@ -6,8 +6,8 @@
 #SBATCH --ntasks-per-node=4
 #SBATCH --mem=16G
 #SBATCH --time=01:00:00                 # 1 hour should be enough
-#SBATCH --output=slurm_logs/import_%j.out
-#SBATCH --error=slurm_logs/import_%j.err
+#SBATCH --output=slurm_out/import_%j.out # Standard output log
+#SBATCH --error=slurm_out/import_%j.err  # Standard error log
 
 set -e
 
@@ -31,13 +31,12 @@ module load qiime2/2023.5
 
 # --- 3. Paths ---
 BASE_DIR=$(pwd) # Assumes sbatch is run from project root
-MANIFEST_PATH="${BASE_DIR}/qiime2_artifacts/${PROJECT_NAME}_manifest.tsv"
-OUTPUT_DIR="${BASE_DIR}/qiime2_artifacts/${PROJECT_NAME}_dada2_output"
+MANIFEST_PATH="${BASE_DIR}//raw_data/${PROJECT_NAME}/manifest.tsv"
+OUTPUT_DIR="${BASE_DIR}/qiime2_artifacts/${PROJECT_NAME}"
 DEMUX_QZA="${OUTPUT_DIR}/demux_seqs.qza"
 DEMUX_QZV="${OUTPUT_DIR}/demux_seqs_viz.qzv"
 
 mkdir -p "$OUTPUT_DIR"
-mkdir -p slurm_logs # For the output/error files
 
 # --- 4. Run Import and Visualization ---
 echo "Importing data..."
@@ -54,5 +53,4 @@ qiime demux summarize \
 
 echo "---"
 echo "Job Complete."
-echo "Download $DEMUX_QZV and view at https://view.qiime2.org/"
-echo "Then, edit 03_run_dada2.slurm with your chosen parameters."
+
