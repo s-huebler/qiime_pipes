@@ -3,13 +3,13 @@
 # --- 1. SLURM Directives (The "Work Order") ---
 #
 # Use the $SLURM_ACCOUNT variable, or default to 'default_account' if not set
-#SBATCH --account=${SLURM_ACCOUNT:-owner-guest}
+#SBATCH --account=guo
 #
 # Use the $SLURM_PARTITION variable, or default to 'general' if not set
-#SBATCH --partition=${SLURM_PARTITION:-owner-guest}
+#SBATCH --partition=kingspeak-shared
 #
 # Use the $SLURM_MAIL_USER variable, or default to yourself (as a fallback)
-#SBATCH --mail-user=${SLURM_MAIL_USER:-your_email@university.edu}
+#SBATCH --mail-user=$SLURM_MAIL_USER
 #
 #SBATCH --job-name=download_sra    # Job name
 #SBATCH --output=slurm_out/download_%j.out # Standard output log
