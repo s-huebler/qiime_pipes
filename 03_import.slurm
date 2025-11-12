@@ -26,7 +26,8 @@ echo "Loading QIIME 2..."
 #conda activate qiime2-env-name # <-- TODO: Change to your QIIME 2 env name
 
 # Option 2: Module Load (example)
- module load qiime2/2023.5
+module load anaconda3/2023.03
+module load qiime2/2023.5
 
 # --- 3. Paths ---
 BASE_DIR=$(pwd) # Assumes sbatch is run from project root
