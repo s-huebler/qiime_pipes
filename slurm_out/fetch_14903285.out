@@ -1,0 +1,14 @@
+--- Starting SRA download job ---
+Job ID: 14903285
+Running on host: kp229
+--- Modules loaded. ---
+/uufs/chpc.utah.edu/sys/installdir/r8/sratoolkit/3.1.1/bin/prefetch
+/uufs/chpc.utah.edu/sys/installdir/r8/sratoolkit/3.1.1/bin/fasterq-dump
+--- Step 7: Downloading & converting to FASTQ ---
+Changing to directory: /uufs/chpc.utah.edu/common/home/u1477302/Documents/qiime_pipes/raw_data/PRJNA979931
+Running prefetch...
+Running fasterq-dump...
+--- fasterq-dump complete. ---
+--- Step 8: Creating manifest file... ---
+--- Step 9: Returning to base directory. ---
+--- Slurm job complete. ---
