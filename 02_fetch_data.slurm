@@ -118,7 +118,7 @@ for f in *_1.fastq; do
     
     # Append the sample information to manifest.tsv
     # Using $CWD ensures we get the full, absolute path
-    echo -e "$id\t${CWD}/$f\t${CWD}/$r" >> manifest.tsv
+    echo -e "$id\t${pwd}/$f\t${pwd}/$r" >> manifest.tsv
   else
     # Optional: Log a warning for skipped files
     echo "Warning: Skipping ${f/_1.fastq/} because one or both read files are missing." >&2

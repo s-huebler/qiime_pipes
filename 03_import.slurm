@@ -31,7 +31,7 @@ module load qiime2/2023.5
 
 # --- 3. Paths ---
 BASE_DIR=$(pwd) # Assumes sbatch is run from project root
-MANIFEST_PATH="${BASE_DIR}//raw_data/${PROJECT_NAME}/manifest.tsv"
+MANIFEST_PATH="${BASE_DIR}/raw_data/${PROJECT_NAME}/manifest.tsv"
 OUTPUT_DIR="${BASE_DIR}/qiime2_artifacts/${PROJECT_NAME}"
 DEMUX_QZA="${OUTPUT_DIR}/demux_seqs.qza"
 DEMUX_QZV="${OUTPUT_DIR}/demux_seqs_viz.qzv"
