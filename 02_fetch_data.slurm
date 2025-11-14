@@ -14,7 +14,7 @@
 #SBATCH --job-name=download_sra    # Job name
 #SBATCH --output=slurm_out/fetch_%j.out # Standard output log
 #SBATCH --error=slurm_out/fetch_%j.err  # Standard error log
-#SBATCH --time=08:00:00            # Max time (2 hours). Adjust as needed.
+#SBATCH --time=01:00:00            # Max time (2 hours). Adjust as needed.
 #SBATCH --nodes=1                  # Run on a single node
 #SBATCH --ntasks=1                 # Run one task
 #SBATCH --cpus-per-task=8          # Request 8 CPUs (for fasterq-dump)
@@ -42,7 +42,7 @@ PROJECT_NAME="$1"
 
 # --- Load HPC Modules ---
 # Purge any modules you might have loaded
-module purge 
+module --force purge 
 
 # Load the SRA Toolkit module
 module load sra-toolkit/3.1.1 

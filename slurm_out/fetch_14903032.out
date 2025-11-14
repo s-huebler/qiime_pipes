@@ -1,0 +1,4 @@
+--- Starting SRA download job ---
+Job ID: 14903032
+Running on host: kp025
+Usage: sbatch 02_fetch_data.slurm <ProjectName>

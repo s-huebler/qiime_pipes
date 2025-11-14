@@ -1,0 +1,6 @@
+There was a problem importing /uufs/chpc.utah.edu/common/home/u1477302/Documents/qiime_pipes//raw_data/PRJNA979931/manifest.tsv:
+
+  /uufs/chpc.utah.edu/common/home/u1477302/Documents/qiime_pipes/raw_data/PRJNA979931/manifest.tsv is not a(n) PairedEndFastqManifestPhred33V2 file:
+
+  Filepath on line 1 and column "forward-absolute-filepath" could not be found (/SRR24823596_1.fastq) for sample "SRR24823596".
+
