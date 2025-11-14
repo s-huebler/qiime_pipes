@@ -27,6 +27,7 @@ set -e # Exit immediately if a command fails
 # --- Setup ---
 echo "--- Starting SRA download job ---"
 echo "Job ID: $SLURM_JOB_ID"
+
 echo "Running on host: $(hostname)"
 
 # Create the directory for Slurm logs (if it doesn't exist)
@@ -86,7 +87,7 @@ prefetch --max-size 100G --option-file run_accessions.txt
 echo "Running fasterq-dump..."
 # We pipe the accessions to fasterq-dump.
 # We also use the $SLURM_CPUS_PER_TASK variable to tell
-# fasterq-dump how many CPUs we requested from Slurm.
+start fasterq-dump how many CPUs we requested from Slurm.
 cat run_accessions.txt | while read srr; do
     echo "Processing $srr"
     fasterq-dump \
