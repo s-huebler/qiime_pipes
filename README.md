@@ -25,7 +25,7 @@ Example: ./01_fetch_accessions.sh PRJNA724885 PRJNA724885_Moraes2024
 
 ## HPC Setup (One-Time Only)
 
-Before you can run the `02_download_and_manifest.slurm` script, you must set three environment variables on your HPC's login node. This tells Slurm your account, partition, and email.
+Before you can run the `02_fetch_data.slurm` script, you must set three environment variables on your HPC's login node. This tells Slurm your account, partition, and email.
 
 1.  Open your `.bashrc` file for editing:
     ```bash
